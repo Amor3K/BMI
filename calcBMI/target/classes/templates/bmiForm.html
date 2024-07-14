@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Kalkulator BMI</h1>
+    <form action="#" th:action="@{/calculate}" th:object="${bmiForm}" method="post">
+        <div>
+            <label>Waga (kg):</label>
+            <input type="text" th:field="*{weight}" />
+        </div>
+        <div>
+            <label>Wzrost (cm):</label>
+            <input type="text" th:field="*{height}" />
+        </div>
+        <div>
+            <button type="submit">Oblicz</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
